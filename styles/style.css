@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+15&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+AU+SA:wght@100..400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+html {
+  font-size: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+ /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative; 
+}
+ .video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -100;
+    right: 0;
+
+} 
+@media(min-aspect-ratio:16/9){
+    .video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .video{
+        width: auto;
+        height: 100%;
+    }
+} 
+.msg {
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  margin: auto;
+
+  background-color: rgb(15, 15, 61);
+  color: white;
+  text-align: center;
+  /* padding: 15px 0;   */
+  transition: top 0.3s;
+  z-index: 1000;
+  font-family: "Barlow", serif;
+  display: block;
+  overflow: hidden;
+  position: static;
+
+}
+h3 {
+  animation: flow 3s infinite alternate;
+  white-space: nowrap;
+  margin-top: 10px;
+}
+@keyframes flow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.navbar-section {
+  /* width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   justify-content: space-evenly;
+    font-size: .1.2rem;
+    color: grey;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    gap: 50px;
+    margin-top: 20px;
+}
+.navbar-section nav{ */
+  gap: 30px;
+}
+nav a {
+  gap: 50px;
+}
+.heading {
+  margin: auto;
+  /* background-color: aquamarine; */
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
+}
+/* .heading>.btn */
+.heading button {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 20px;
+  /* background-color: pink; */
+  text-align: center;
+  font-weight: 100;
+  color: gray;
+  background-color: white;
+  border: 2px solid blue;
+}
+.navbar-section button {
+  text-decoration: none;
+
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main-section{
+    width: 100%;
+    height: 100%;
+}
+
+.first-card {
+  background-color: #baeafb;
+  display: flex;
+flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  gap: 30px;
+  margin-top: 50px;
+
+}
+.top-100-header {
+  color: #327fef;
+  font-size: 8rem;
+  font-family: Arial sans-serif;
+  margin-left: 50px;
+
+}
+.first-card >.new-style{
+    color: black;
+    width: 120px;
+    height:120px;
+    border-radius: 50%;
+    background-color: #22D081;
+    margin-bottom: 5.5%;
+    text-align: center;
+display: flex;
+ align-items: center;
+border-top: 2px solid blanchedalmond ;
+}
+.top-100-subheader h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: black;
+}
+.top-100-subheader a{
+ text-underline-position: above;
+}
+.secondcard{
+    display: grid;
+     grid-template-columns: 1fr;
+     width: 90%;
+     height: 80vh;
+     background-color: yellow;
+     justify-content: space-evenly;
+     align-items: center;
+     margin: auto;
+ 
+}
+.content{
+    display: flex;
+    flex-direction: row;
+   
+justify-content: space-evenly;
+    align-items: center;
+}
+.shoes-brands{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top-brands{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 90%;
+    height: 500px;
+    gap: 20px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+.shoes-brands h2{
+  margin: auto;
+  margin-top: 20px;
+}
+.shoes1{
+    width: 300px;
+    height: 500px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding-bottom: 10px;
+}
+.shoes1 img{
+    width: 100%;
+    height: 50%;
+}
+.top-brands >.btn-brands{
+    margin: auto;
+    margin-top: 10px;
+    background-color: #22D081;
+
+}
+
+.flash{
+    width: 70%;
+    height: 30vh;
+    background-color: black;
+    margin: auto;
+    margin-top: 40px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.flash h2{
+    color: pink;
+}
+.apprl{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    gap: 10p;
+    width: 80%;
+    height: 10vh;
+    margin-top: 20px;
+    margin: auto;
+ 
+}
+.navbar-section button{
+font-size: .8rem;
+gap: 5px;
+margin-top: 20px;
+}
+.navbar-section button:hover{
+font-size: 1rem;
+  cursor: pointer;
+}
+.main-section button{
+margin: auto;
+  padding: 10px;
+  text-align: center;
+}
